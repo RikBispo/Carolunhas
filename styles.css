@@ -1223,23 +1223,32 @@ textarea.form-input {
 
 /* Footer */
 footer {
-  padding: 40px 0;
+  padding: 40px 0 100px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
   color: var(--text-muted);
   font-size: 0.9rem;
 }
 
-/* Responsive Rules */
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile & Tablet Responsive System */
 @media (max-width: 992px) {
   .hero-grid, .about-card, .customizer-box, .contact-card {
     grid-template-columns: 1fr;
   }
-  .hero-title {
-    font-size: 2.8rem;
-  }
   .hero-visual {
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .nav-links {
     display: none;
@@ -1249,21 +1258,185 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 2.2rem;
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
   }
-  .section-title {
-    font-size: 1.8rem;
+  .container {
+    padding: 0 16px;
+  }
+  header {
+    top: 10px;
+  }
+  .navbar {
+    padding: 10px 16px;
+  }
+  .logo-title {
+    font-size: 1.15rem;
+  }
+  .logo-subtitle {
+    font-size: 0.6rem;
+  }
+  .logo-orb {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile Menu Glass Drawer */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+    right: 10px;
+    background: rgba(4, 25, 38, 0.96);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    z-index: 1001;
+  }
+  .nav-links.mobile-active {
+    display: flex !important;
+    animation: fadeInDown 0.3s ease forwards;
+  }
+  .nav-links .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 1.05rem;
+  }
+  
+  /* Hero Tuning */
+  .hero-section {
+    padding: 120px 0 50px;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.6rem);
+  }
+  .hero-description {
+    font-size: 1rem;
   }
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
   }
-  .about-stats {
-    grid-template-columns: 1fr;
+  .hero-actions .btn-aero {
+    width: 100%;
   }
-  .about-card, .customizer-box, .contact-card {
-    padding: 24px;
+  .hero-features {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-card-stack {
+    max-width: 320px;
+  }
+  .badge-1 {
+    top: -12px;
+    right: 0px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  .badge-2 {
+    bottom: -12px;
+    left: 0px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Section Titles */
+  .section-header {
+    margin-bottom: 32px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Portfolio Grid */
+  .portfolio-section {
+    padding: 60px 0;
+  }
+  .portfolio-filters {
+    gap: 8px;
+  }
+  .filter-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  /* Customizer Studio */
+  .customizer-section {
+    padding: 60px 0;
+  }
+  .customizer-box {
+    padding: 20px 16px;
+    gap: 24px;
+  }
+  .option-pills {
+    gap: 8px;
+  }
+  .pill-opt {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+  .customizer-preview {
+    padding: 20px 12px;
+  }
+  .preview-nail-card {
+    max-width: 220px;
+    height: 190px;
+  }
+
+  /* Services & Contact */
+  .services-section, .testimonials-section {
+    padding: 60px 0;
+  }
+  .contact-section {
+    padding: 60px 0 120px;
+  }
+  .contact-card {
+    padding: 24px 16px;
+    gap: 24px;
+  }
+  .contact-method-item {
+    padding: 12px;
+  }
+  .method-details p {
+    font-size: 0.95rem;
+    word-break: break-all;
+  }
+
+  /* Modal Lightbox */
+  .modal-content {
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 18px;
+  }
+  .modal-img-box {
+    max-height: 240px;
+  }
+
+  /* Floating Dock */
+  .floating-dock {
+    bottom: 12px;
+    padding: 8px 16px;
+    gap: 10px;
+    max-width: calc(100vw - 32px);
+  }
+  .dock-item {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
   }
 }
+

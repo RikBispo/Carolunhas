@@ -340,20 +340,23 @@ function initMobileMenu() {
 
   if (!menuBtn || !navLinks) return;
 
-  menuBtn.addEventListener('click', () => {
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.display = 'none';
-    } else {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '70px';
-      navLinks.style.left = '0';
-      navLinks.style.right = '0';
-      navLinks.style.background = 'rgba(4, 25, 38, 0.95)';
-      navLinks.style.padding = '20px';
-      navLinks.style.borderRadius = '20px';
-      navLinks.style.border = '1px solid rgba(0, 229, 255, 0.4)';
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('mobile-active');
+  });
+
+  // Close menu when clicking link
+  document.querySelectorAll('#nav-links .nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-active');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+      navLinks.classList.remove('mobile-active');
     }
   });
 }
+
