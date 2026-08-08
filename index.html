@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carolunhas | Ana Carolinni Nail Designer - Portfólio Frutiger Aero</title>
+  <meta name="description" content="Portfólio exclusivo de Nail Design por Ana Carolinni na Carolunhas. Alongamento em Gel, Esmaltação de Alta Durabilidade, Nail Art 3D e Encapsuladas. Agende pelo WhatsApp!">
+  <meta name="keywords" content="Carolunhas, Ana Carolinni, Nail Designer, Unhas de Gel, Alongamento de Unhas, Nail Art, Esmaltação em Gel, Portfólio Unhas">
+  
+  <!-- Favicon & Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Background Interactive Canvas & Aurora Overlay -->
+  <div class="aurora-bg"></div>
+  <canvas id="aero-canvas"></canvas>
+
+  <!-- Header / Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#inicio" class="logo-brand">
+          <div class="logo-orb">C</div>
+          <div class="logo-text">
+            <span class="logo-title">Carolunhas</span>
+            <span class="logo-subtitle">Ana Carolinni</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#customizer" class="nav-link">Simulador 3D</a></li>
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <a href="https://wa.me/5511945056292?text=Ol%C3%A1%20Ana!%20Vim%20pelo%20site%20da%20Carolunhas%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" class="btn-aero">
+            <i class="fa-brands fa-whatsapp">
+            </i> Agendar Horário
+          </a>
+          <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span> Exclusividade & Biossegurança Premium
+          </div>
+          <h1 class="hero-title">
+            Sua autoestima refletida no <span>brilho perfeito</span> de cada detalhe.
+          </h1>
+          <p class="hero-description">
+            Seja bem-vinda ao universo <strong>Carolunhas</strong> por <strong>Ana Carolinni</strong>. Especialista em alongamentos esculpidos, esmaltação em gel e nail arts autorais com acabamento <em>Top Coat Mirror Gloss</em>.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/5511945056292?text=Ol%C3%A1%20Ana!%20Gostaria%20de%20ver%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20na%20Carolunhas." target="_blank" class="btn-aero btn-aero-pink">
+              <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+            <a href="#portfolio" class="btn-aero btn-aero-glass">
+              <i class="fa-regular fa-image"></i> Ver Portfólio
+            </a>
+          </div>
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-sparkles"></i></div>
+              <span>Gel de Longa Durabilidade</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-shield-heart"></i></div>
+              <span>Materiais 100% Esterilizados</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+              <span>Design Autoral & Exclusivo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-main-card">
+              <div class="hero-img-wrapper">
+                <img src="assets/portfolio/nail-1.jpg" alt="Alongamento em Gel por Ana Carolinni">
+                <div class="hero-img-overlay"></div>
+                <div class="hero-card-info">
+                  <span class="hero-card-tag">Acabamento Glossy</span>
+                  <h3 style="font-family: var(--font-heading); font-size: 1.2rem;">Alongamento Gel Moldado</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Aero Badges -->
+            <div class="hero-floating-badge badge-1">
+              <i class="fa-solid fa-star" style="color: var(--aero-yellow);"></i>
+              <div>
+                <strong style="display: block; font-size: 0.85rem;">Nota 5.0</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Clientes Satisfeitas</span>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge badge-2">
+              <i class="fa-solid fa-droplet" style="color: var(--aero-aqua);"></i>
+              <div>
+                <strong style="display: block; font-size: 0.85rem;">Brilho Top Coat</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Efeito Espelhado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Galeria de Trabalhos</span>
+        <h2 class="section-title">Portfólio <span>Carolunhas</span></h2>
+        <p style="color: var(--text-secondary); margin-top: 10px;">Clique nas fotos para ver os detalhes e solicitar o mesmo modelo no WhatsApp.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">Todas as Unhas</button>
+        <button class="filter-btn" data-filter="gel">Extensão em Gel</button>
+        <button class="filter-btn" data-filter="nailart">Nail Art 3D</button>
+        <button class="filter-btn" data-filter="encapsulada">Encapsuladas</button>
+        <button class="filter-btn" data-filter="francesinha">Francesinhas</button>
+      </div>
+
+      <!-- Grid of Photos -->
+      <div class="portfolio-grid">
+        <!-- Item 1 -->
+        <div class="portfolio-card" data-category="gel">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-1.jpg" alt="Gel Moldado Deluxe">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Extensão em Gel</span>
+            <h3 class="portfolio-title">Gel Moldado Deluxe</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="portfolio-card" data-category="francesinha">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-2.jpg" alt="Francesinha Sorriso & Gel">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Francesinhas</span>
+            <h3 class="portfolio-title">Francesinha Sorriso & Gloss</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="portfolio-card" data-category="encapsulada">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-3.jpg" alt="Alongamento Cristal Encapsulado">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Encapsuladas</span>
+            <h3 class="portfolio-title">Cristal Encapsulado Rose</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="portfolio-card" data-category="francesinha">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-4.jpg" alt="Francesinha Reversa Glitter">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Francesinhas</span>
+            <h3 class="portfolio-title">Francesinha Reversa & Glitter</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="portfolio-card" data-category="nailart">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-5.jpg" alt="Nail Art 3D Pedrarias">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Nail Art 3D</span>
+            <h3 class="portfolio-title">Nail Art Autoral com Cristais</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="portfolio-card" data-category="gel">
+          <div class="portfolio-img-container">
+            <img src="assets/portfolio/nail-6.jpg" alt="Banho de Gel & Brilho Mirror">
+            <div class="shine-overlay"></div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-category">Extensão em Gel</span>
+            <h3 class="portfolio-title">Banho de Gel Efeito Espelhado</h3>
+            <div class="portfolio-action">
+              <span>Ver Detalhes</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Customizer Studio -->
+  <section class="customizer-section" id="customizer">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Experiência Interativa</span>
+        <h2 class="section-title">Simulador de <span>Unhas 3D</span></h2>
+        <p style="color: var(--text-secondary); margin-top: 10px;">Monte a combinação dos seus sonhos e peça seu orçamento personalizado diretamente no WhatsApp!</p>
+      </div>
+
+      <div class="glass-panel customizer-box">
+        <div class="customizer-controls">
+          <h3>Personalize seu Design</h3>
+
+          <!-- Formato -->
+          <div class="control-group" data-config-type="shape">
+            <span class="control-label"><i class="fa-solid fa-hand"></i> Formato das Unhas</span>
+            <div class="option-pills">
+              <button class="pill-opt selected" data-value="Amendoada">Amendoada</button>
+              <button class="pill-opt" data-value="Stiletto">Stiletto</button>
+              <button class="pill-opt" data-value="Quadrada">Quadrada</button>
+              <button class="pill-opt" data-value="Bailarina">Bailarina</button>
+            </div>
+          </div>
+
+          <!-- Acabamento -->
+          <div class="control-group" data-config-type="finish">
+            <span class="control-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Acabamento & Estilo</span>
+            <div class="option-pills">
+              <button class="pill-opt selected" data-value="Top Coat Mirror Gloss">Top Coat Mirror Gloss</button>
+              <button class="pill-opt" data-value="Glitter 3D Aurora">Glitter 3D Aurora</button>
+              <button class="pill-opt" data-value="Cromo Holo Polish">Cromo Holo Polish</button>
+              <button class="pill-opt" data-value="Encapsulada Rose Gold">Encapsulada Rose Gold</button>
+            </div>
+          </div>
+
+          <!-- Tamanho -->
+          <div class="control-group" data-config-type="length">
+            <span class="control-label"><i class="fa-solid fa-ruler-vertical"></i> Comprimento</span>
+            <div class="option-pills">
+              <button class="pill-opt" data-value="Curto">Curto</button>
+              <button class="pill-opt selected" data-value="Médio">Médio</button>
+              <button class="pill-opt" data-value="Longo">Longo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Preview Box -->
+        <div class="customizer-preview">
+          <span style="font-size: 0.8rem; text-transform: uppercase; color: var(--aero-lime); font-weight: 700;">Prévia em Tempo Real</span>
+          <div class="preview-nail-card" id="preview-nail"></div>
+          <p class="preview-summary" id="customizer-summary-text">
+            Formato Amendoada • Acabamento Top Coat Mirror Gloss • Tamanho Médio
+          </p>
+          <a href="#" id="customizer-cta-btn" target="_blank" class="btn-aero btn-aero-pink" style="width: 100%;">
+            <i class="fa-brands fa-whatsapp"></i> Quero Esse Design no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Procedimentos</span>
+        <h2 class="section-title">Serviços <span>Especializados</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-gem"></i></div>
+            <h3 class="service-title">Alongamento em Gel</h3>
+            <p class="service-desc">Esculpido com precisão para alinhamento perfeito, resistência e aspecto natural deslumbrante.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-price">A partir de R$ 150</span>
+            <span class="service-duration"><i class="fa-regular fa-clock"></i> ~2h30</span>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-droplet"></i></div>
+            <h3 class="service-title">Banho de Gel / Blindagem</h3>
+            <p class="service-desc">Camada protetora para fortalecer suas unhas naturais, prevenindo quebras com acabamento extra brilho.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-price">A partir de R$ 90</span>
+            <span class="service-duration"><i class="fa-regular fa-clock"></i> ~1h30</span>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 class="service-title">Esmaltação em Gel</h3>
+            <p class="service-desc">Cor radiante que dura até 3 semanas sem descascar, secagem instantânea na cabine LED/UV.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-price">A partir de R$ 70</span>
+            <span class="service-duration"><i class="fa-regular fa-clock"></i> ~1h00</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="glass-panel service-card">
+          <div>
+            <div class="service-icon-box"><i class="fa-solid fa-heart"></i></div>
+            <h3 class="service-title">Nail Art & Encapsuladas</h3>
+            <p class="service-desc">Decorações exclusivas, pedrarias, folhas de ouro e francesinhas personalizadas autorais.</p>
+          </div>
+          <div class="service-meta">
+            <span class="service-price">Sob Consulta</span>
+            <span class="service-duration"><i class="fa-regular fa-clock"></i> Personalizado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Depoimentos</span>
+        <h2 class="section-title">O que dizem as <span>Clientes</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="glass-panel testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"O trabalho da Ana Carolinni é impecável! Meu alongamento em gel dura mais de um mês sem nenhuma infiltração e o brilho é espetacular."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MB</div>
+            <div class="author-info">
+              <h4>Mariana Barbosa</h4>
+              <span>Cliente Frequente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Espaço extremamente limpo, biossegurança nota 1000 e uma atenção aos detalhes que nunca vi igual. Recomendo a Carolunhas para todo mundo!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CS</div>
+            <div class="author-info">
+              <h4>Camila Silva</h4>
+              <span>Cliente Frequente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"A nail art encapsulada ficou surreal de linda! Todo mundo me pergunta onde fiz minhas unhas. A Ana é uma verdadeira artista."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JR</div>
+            <div class="author-info">
+              <h4>Juliana Rocha</h4>
+              <span>Cliente Frequente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div class="glass-panel contact-card">
+        <div class="contact-info">
+          <span class="section-subtitle">Entre em Contato</span>
+          <h3>Agende seu Horário na Carolunhas</h3>
+          <p>Dúvidas, agendamentos ou orçamentos personalizados? Entre em contato diretamente pelos canais abaixo com a <strong>Ana Carolinni</strong>.</p>
+
+          <div class="contact-methods">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5511945056292?text=Ol%C3%A1%20Ana!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Carolunhas." target="_blank" class="contact-method-item">
+              <div class="method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="method-details">
+                <h4>WhatsApp Direto</h4>
+                <p>(11) 94505-6292</p>
+              </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/anathds" target="_blank" class="contact-method-item">
+              <div class="method-icon ig"><i class="fa-brands fa-instagram"></i></div>
+              <div class="method-details">
+                <h4>Instagram Oficial</h4>
+                <p>@anathds</p>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:anarodrigues200705@gmail.com" class="contact-method-item">
+              <div class="method-icon mail"><i class="fa-regular fa-envelope"></i></div>
+              <div class="method-details">
+                <h4>E-mail de Contato</h4>
+                <p>anarodrigues200705@gmail.com</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Form -->
+        <div class="contact-form-box">
+          <h4>Envie uma Mensagem Rápida</h4>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" id="form-name" class="form-input" placeholder="Seu Nome Completo" required>
+            </div>
+            <div class="form-group">
+              <select id="form-service" class="form-input" style="background: rgba(4, 25, 38, 0.9);" required>
+                <option value="" disabled selected>Selecione o Serviço Desejado</option>
+                <option value="Alongamento em Gel">Alongamento em Gel</option>
+                <option value="Banho de Gel / Blindagem">Banho de Gel / Blindagem</option>
+                <option value="Esmaltação em Gel">Esmaltação em Gel</option>
+                <option value="Nail Art / Encapsulada">Nail Art / Encapsulada</option>
+                <option value="Manutenção de Gel">Manutenção de Gel</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea id="form-message" class="form-input" placeholder="Descreva como deseja suas unhas ou suas dúvidas..." required></textarea>
+            </div>
+            <button type="submit" class="btn-aero btn-aero-pink" style="width: 100%;">
+              <i class="fa-paper-plane"></i> Enviar Mensagem via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="portfolio-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-img-box">
+        <img src="" id="modal-img" alt="Detalhe do Portfólio">
+      </div>
+      <div class="modal-details">
+        <span class="portfolio-category" id="modal-category">Categoria</span>
+        <h3 id="modal-title">Título do Modelo</h3>
+        <p>Design executado por Ana Carolinni com acabamento duradouro e produtos premium de alta performance.</p>
+        <a href="#" id="modal-cta" target="_blank" class="btn-aero btn-aero-pink" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> Quero Agendar Esse Modelo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Aero Bottom Dock -->
+  <div class="floating-dock">
+    <a href="https://wa.me/5511945056292" target="_blank" class="dock-item" title="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://instagram.com/anathds" target="_blank" class="dock-item" title="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="mailto:anarodrigues200705@gmail.com" class="dock-item" title="E-mail">
+      <i class="fa-regular fa-envelope"></i>
+    </a>
+    <a href="#customizer" class="dock-item" title="Simulador 3D">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Carolunhas • Ana Carolinni. Todos os direitos reservados. Design estilo Frutiger Aero.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

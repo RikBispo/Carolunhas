@@ -1,0 +1,8 @@
+# Ignore installer binaries and temporary files
+Unhas Que ela fez/
+*.exe
+*.msi
+*.iso
+.DS_Store
+Thumbs.db
+node_modules/
